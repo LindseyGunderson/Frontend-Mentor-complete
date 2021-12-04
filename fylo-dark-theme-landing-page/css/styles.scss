@@ -1,0 +1,28 @@
+// import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+// font families
+$ff-raleway: 'Open Sans', sans-serif;
+$ff-opensans: 'Raleway', sans-serif;
+
+// primary colors
+$primary-mainBG: hsl(218, 28%, 13%);
+$primary-sectionsBG: hsl(217, 28%, 15%);
+$primary-footer: hsl(216, 53%, 9%);
+$primary-testimonials: hsl(219, 30%, 18%);
+
+// accents
+$accent-cta-cyan: hsl(176, 68%, 64%);
+$accent-cta-blue: hsl(198, 60%, 50%);
+$accent-errors: hsl(0, 100%, 63%);
+
+// neutrals colors
+$netural-white: hsl(0, 0%, 100%);
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
