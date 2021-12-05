@@ -13,7 +13,7 @@ body {
   color: white;
 }
 
-.container .navigation {
+.navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,16 +29,16 @@ body {
           align-items: center;
   padding: 1.2rem 1rem;
 }
-.container .navigation .logo {
+.navigation .logo {
   width: 30%;
 }
-.container .navigation .logo img {
+.navigation .logo img {
   width: 80%;
 }
-.container .navigation .navigation-links {
+.navigation .navigation-links {
   width: 70%;
 }
-.container .navigation .navigation-links ul {
+.navigation .navigation-links ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,19 +54,23 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.container .navigation .navigation-links ul li {
+.navigation .navigation-links ul li {
   padding-left: 1rem;
 }
-.container .navigation .navigation-links ul li a {
+.navigation .navigation-links ul li a {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   color: white;
   font-weight: 400;
   cursor: pointer;
 }
-.container .navigation .navigation-links ul li a:hover {
+.navigation .navigation-links ul li a:hover {
   font-weight: 600;
   text-decoration: underline;
+}
+
+.container {
+  padding: 0 5%;
 }
 .container .hero-banner {
   display: -webkit-box;
@@ -126,5 +130,113 @@ body {
 }
 .container .features .feature-item p {
   line-height: 1.3rem;
+}
+.container .productive div img {
+  width: 100%;
+}
+.container .productive div > * {
+  margin-bottom: 1rem;
+}
+.container .productive div p {
+  line-height: 1.3rem;
+}
+.container .productive div a {
+  line-height: 1rem;
+  color: #65e2d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .productive div a svg {
+  margin-left: 0.5rem;
+}
+.container .testimonials {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 2rem;
+}
+.container .testimonials .testimonial {
+  padding: 2rem 2rem;
+  background-color: #202a3c;
+  border-radius: 5px;
+}
+.container .testimonials .testimonial p {
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+.container .testimonials .testimonial div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .testimonials .testimonial div img {
+  width: 30px;
+  border-radius: 100px;
+  margin-right: 1rem;
+}
+.container .testimonials .testimonial div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.container .subscribe {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #1c2431), color-stop(50%, #0b1523));
+  background: linear-gradient(180deg, #1c2431 50%, #0b1523 50%);
+}
+.container .subscribe .subscribe-card {
+  padding: 2rem 1rem;
+  background-color: #1c2431;
+  -webkit-box-shadow: 2px 3px 15px #161616;
+          box-shadow: 2px 3px 15px #161616;
+}
+.container .subscribe .subscribe-card p {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+.container .subscribe .subscribe-card div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container .subscribe .subscribe-card div input {
+  padding: 0.8rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+.container .subscribe .subscribe-card div input::after {
+  font-size: 12px;
+}
+.container .subscribe .subscribe-card div button {
+  padding: 0.8rem;
+  border-radius: 100px;
+  border: none;
+  background: #339ecc;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
