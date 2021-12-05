@@ -26,3 +26,177 @@ $netural-white: hsl(0, 0%, 100%);
     padding: 0;
 
 }
+
+body {
+
+    font-family: $ff-opensans;
+    font-size: 14px;
+    background: $primary-mainBG;
+    color: $netural-white;
+}
+
+.container {
+
+    .navigation {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 1rem;
+
+        .logo {
+
+            width: 30%;
+
+            img {
+
+                width: 80%;
+            }
+        }
+
+        .navigation-links {
+
+            width: 70%;
+
+            ul {
+
+                list-style: none;
+                display: flex;
+                flex-direction: row;       
+                justify-content: center;      
+                align-items: center;   
+                
+                li {
+
+                    padding-left: 1rem;
+
+                    a {
+
+                        text-decoration: none;
+                        font-family: $ff-raleway;
+                        color: $netural-white;
+                        font-weight: 400;
+                        cursor: pointer;
+
+                        &:hover {
+
+                            font-weight: 600;
+                            text-decoration: underline;
+
+                        }
+                    }
+
+                }
+            }
+        }
+
+    } //end of navigation bar
+
+    .hero-banner {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: $primary-sectionsBG;
+
+        .banner-image {
+        
+            // background: url("../images/bg-curvy-mobile.svg");
+            // background-size: 100%;
+            // background-position: bottom;
+            // background-repeat: no-repeat;
+            // background-position-y: 250px;
+
+            img {
+
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+        }
+
+        .banner-content {
+            
+            background-color: $primary-mainBG;
+          
+            &>* {
+
+                margin-bottom: 1.5rem;
+
+            }
+
+            h1 {
+
+                line-height: 2.5rem;
+                
+            }
+
+            p {
+
+                line-height: 1.3rem;
+                
+
+            }
+
+            a {
+
+                text-decoration: none;
+                color: $netural-white;
+                font-weight: 600;
+                background-color: $accent-cta-cyan;
+                padding: 0.8rem 4rem;
+                border-radius: 100px;
+
+                &:hover {
+
+                    cursor: pointer;
+                    background-color: rgba($accent-cta-cyan, 0.7);
+
+                }
+
+            }
+
+        }
+
+    } //end of hero banner
+
+    .features {
+
+        text-align: center;
+        padding: 2rem 0;
+
+
+
+        .feature-item {
+            &>* {
+
+                margin-bottom: 1rem;
+    
+            }
+
+            img {
+
+                width: 50px;
+            }
+
+            h2 {
+
+
+            }
+
+            p {
+
+                line-height: 1.3rem;
+
+            }
+
+        }
+
+    }
+
+
+}
