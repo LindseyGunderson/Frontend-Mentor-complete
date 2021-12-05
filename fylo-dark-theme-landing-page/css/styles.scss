@@ -293,7 +293,7 @@ body {
     .subscribe {
 
         text-align: center; 
-        background: linear-gradient(180deg,  $primary-sectionsBG 50%, $primary-footer 50%);
+        // background: linear-gradient(90deg,  $primary-sectionsBG 50%, $primary-footer 50%);
 
         .subscribe-card {
             
@@ -339,6 +339,76 @@ body {
             }
 
 
+        }
+
+    } // end of subscribe section
+
+
+} //end of page container
+
+.footer {
+
+    background: $primary-footer;
+    padding: 3rem 2rem;
+
+    &>* {
+
+        margin-bottom: 2rem;
+    }
+
+
+    .footer-info {
+
+        &>* {
+
+            margin-bottom: 3rem;
+        }
+
+        div {
+
+            &>* {
+
+                margin-bottom: 1rem;
+            }
+
+            p {
+
+
+                img {
+
+                    padding-right: 1rem;
+                }
+            }
+
+            a {
+
+                text-decoration: none;
+                color: $netural-white;
+                display:flex;
+                flex-direction: column;
+
+
+            }
+        }
+
+        .socials {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            a {
+
+                font-size: 20px;
+                margin: 0 0.5rem;
+
+                border: 1px solid $netural-white;
+                border-radius: 100px;
+                padding: 0.5rem;
+                
+
+            }
         }
 
     }
