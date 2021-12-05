@@ -19,6 +19,35 @@ $accent-errors: hsl(0, 100%, 63%);
 // neutrals colors
 $netural-white: hsl(0, 0%, 100%);
 
+
+// breakpoints for different screens
+$bp : (
+mobile: 375px,
+tablet : 768px,
+desktop : 900px
+
+);
+
+
+@mixin query($screen) {
+
+    @each $key, $value in $bp {
+
+        @if($screen == $key){
+
+            @media(max-width : $value){
+
+                @content
+            }
+
+        }
+
+    }
+
+}
+
+
+
 * {
 
     box-sizing: border-box;
@@ -43,6 +72,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 1rem;
+    background: $primary-sectionsBG;
 
     .logo {
 
@@ -95,101 +125,98 @@ body {
 
 .container {
 
-    padding: 0 5%;
 
+    &>* {
+
+        margin-bottom: 4rem;
+    }
+
+// ------- hero banner section  ------- //
     .hero-banner {
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        background: $primary-sectionsBG;
-
-        .banner-image {
+        background: url("../images/bg-curvy-mobile.svg");
+        background-color: hsl(217, 28%, 15%);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom center;
         
-            // background: url("../images/bg-curvy-mobile.svg");
-            // background-size: 100%;
-            // background-position: bottom;
-            // background-repeat: no-repeat;
-            // background-position-y: 250px;
 
+        .banner-content {
+
+            padding: 2rem;
+           
             img {
-
+                
                 width: 100%;
                 height: auto;
                 margin-bottom: 2rem;
             }
-
-        }
-
-        .banner-content {
             
-            background-color: $primary-mainBG;
-          
+            
             &>* {
-
+                
                 margin-bottom: 1.5rem;
-
+                
             }
-
+            
             h1 {
-
+                
                 line-height: 2.5rem;
                 
             }
-
+            
             p {
-
-                line-height: 1.3rem;
                 
-
+                line-height: 1.3rem;
             }
-
+            
             a {
-
+                
                 text-decoration: none;
                 color: $netural-white;
                 font-weight: 600;
                 background-color: $accent-cta-cyan;
                 padding: 0.8rem 4rem;
+                border: none;
                 border-radius: 100px;
-
+                
                 &:hover {
-
+                    
                     cursor: pointer;
                     background-color: rgba($accent-cta-cyan, 0.7);
-
+                    
                 }
-
+                
             }
-
+            
         }
 
     } //end of hero banner
 
+
+    // ------- features section  ------- //
     .features {
 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
         text-align: center;
-        padding: 2rem 0;
-
+        padding: 2rem;
 
 
         .feature-item {
+
+
             &>* {
 
-                margin-bottom: 1rem;
+                margin: 1rem auto;
     
             }
 
             img {
 
                 width: 50px;
-            }
-
-            h2 {
-
-
             }
 
             p {
@@ -204,7 +231,12 @@ body {
 
     .productive {
 
+        padding: 0 2rem;
+
         div {
+
+            margin-bottom: 2rem;
+            text-align: center;
 
             img {
 
@@ -212,15 +244,14 @@ body {
             }
         }
 
+
         div {
+
+            text-align: left;
 
             &>* {
 
                 margin-bottom: 1rem;
-            }
-
-            h3 {
-
             }
 
             p {
@@ -247,8 +278,20 @@ body {
     .testimonials {
 
         display: grid;
-        gap: 30px;
-        margin-bottom: 2rem;
+        grid-template-columns: 300px;
+        gap: 50px;
+        justify-content: center;
+        position: relative;
+        
+        .quote {
+
+            position: aboslute;
+            width: 25px;
+            height: auto;
+            transform: translateY(50px);
+
+        }
+
 
         .testimonial {
 
@@ -261,6 +304,7 @@ body {
     
                     font-size: 12px;
                     line-height: 1.5rem;
+                    margin-bottom: 0.7rem;
     
                 }
 
@@ -293,13 +337,17 @@ body {
     .subscribe {
 
         text-align: center; 
-        // background: linear-gradient(90deg,  $primary-sectionsBG 50%, $primary-footer 50%);
+        background:linear-gradient($primary-mainBG 50%,  $primary-footer 50%);
+        margin-bottom: 0;
 
         .subscribe-card {
             
             padding: 2rem 1rem;
             background-color: $primary-sectionsBG;
             box-shadow: 2px 3px 15px rgb(22, 22, 22);
+            width: 90%;
+            margin: auto auto;
+            border-radius: 10px;
 
             p {
             
@@ -371,14 +419,29 @@ body {
                 margin-bottom: 1rem;
             }
 
-            p {
+            div {
 
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
 
                 img {
-
+    
                     padding-right: 1rem;
                 }
+    
+                p {
+    
+    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    line-height: 1.5rem;
+    
+                }
             }
+
 
             a {
 

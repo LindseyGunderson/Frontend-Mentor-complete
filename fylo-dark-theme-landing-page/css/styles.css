@@ -28,6 +28,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.2rem 1rem;
+  background: #1c2431;
 }
 .navigation .logo {
   width: 30%;
@@ -69,33 +70,24 @@ body {
   text-decoration: underline;
 }
 
-.container {
-  padding: 0 5%;
+.container > * {
+  margin-bottom: 4rem;
 }
 .container .hero-banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
-  background: #1c2431;
+  background: url("../images/bg-curvy-mobile.svg");
+  background-color: #1c2431;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
-.container .hero-banner .banner-image img {
+.container .hero-banner .banner-content {
+  padding: 2rem;
+}
+.container .hero-banner .banner-content img {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
-}
-.container .hero-banner .banner-content {
-  background-color: #181f2a;
 }
 .container .hero-banner .banner-content > * {
   margin-bottom: 1.5rem;
@@ -112,6 +104,7 @@ body {
   font-weight: 600;
   background-color: #65e2d9;
   padding: 0.8rem 4rem;
+  border: none;
   border-radius: 100px;
 }
 .container .hero-banner .banner-content a:hover {
@@ -119,11 +112,14 @@ body {
   background-color: rgba(101, 226, 217, 0.7);
 }
 .container .features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 .container .features .feature-item > * {
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
 .container .features .feature-item img {
   width: 50px;
@@ -131,8 +127,18 @@ body {
 .container .features .feature-item p {
   line-height: 1.3rem;
 }
+.container .productive {
+  padding: 0 2rem;
+}
+.container .productive div {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 .container .productive div img {
   width: 100%;
+}
+.container .productive div {
+  text-align: left;
 }
 .container .productive div > * {
   margin-bottom: 1rem;
@@ -159,8 +165,19 @@ body {
 }
 .container .testimonials {
   display: grid;
-  gap: 30px;
-  margin-bottom: 2rem;
+  grid-template-columns: 300px;
+  gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.container .testimonials .quote {
+  position: aboslute;
+  width: 25px;
+  height: auto;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 .container .testimonials .testimonial {
   padding: 2rem 2rem;
@@ -170,6 +187,7 @@ body {
 .container .testimonials .testimonial p {
   font-size: 12px;
   line-height: 1.5rem;
+  margin-bottom: 0.7rem;
 }
 .container .testimonials .testimonial div {
   display: -webkit-box;
@@ -202,12 +220,18 @@ body {
 }
 .container .subscribe {
   text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #181f2a), color-stop(50%, #0b1523));
+  background: linear-gradient(#181f2a 50%, #0b1523 50%);
+  margin-bottom: 0;
 }
 .container .subscribe .subscribe-card {
   padding: 2rem 1rem;
   background-color: #1c2431;
   -webkit-box-shadow: 2px 3px 15px #161616;
           box-shadow: 2px 3px 15px #161616;
+  width: 90%;
+  margin: auto auto;
+  border-radius: 10px;
 }
 .container .subscribe .subscribe-card p {
   line-height: 1.5rem;
@@ -251,8 +275,36 @@ body {
 .footer .footer-info div > * {
   margin-bottom: 1rem;
 }
-.footer .footer-info div p img {
+.footer .footer-info div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.footer .footer-info div div img {
   padding-right: 1rem;
+}
+.footer .footer-info div div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1.5rem;
 }
 .footer .footer-info div a {
   text-decoration: none;
