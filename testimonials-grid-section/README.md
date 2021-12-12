@@ -39,7 +39,7 @@ This is my solution for the [Testimonial Grid Section on Frontend Mentor](https:
 
 <br> <br>
 
-# Screenshots of My Final Design
+# Screenshots
 
 <br>
 
