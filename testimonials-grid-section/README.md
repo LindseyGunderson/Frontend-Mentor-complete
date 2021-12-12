@@ -44,18 +44,21 @@ This is my solution for the [Testimonial Grid Section on Frontend Mentor](https:
 <br>
 
 ## Desktop
+
 ![Desktop Solution](./screenshots/Desktop_V.jpg)
 
 <br>
 
 
 ## Tablet
+
 ![Tablet Solution](./screenshots/tablet_v.jpg)
 
 <br>
 
 
 ## Mobile
+
 ![Mobile Solution](./screenshots/mobile_v1.jpg) 
 ![Mobile Solution](./screenshots/mobile_v2.jpg) 
 ![Mobile Solution](./screenshots/mobile_v3.jpg)
