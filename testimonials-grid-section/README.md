@@ -9,7 +9,7 @@ This is my solution for the [Testimonial Grid Section on Frontend Mentor](https:
 
   <ol>
     <li>
-      <a href="#overview">Overivew</a>
+      <a href="#overview">Overview</a>
     </li>
     <li>
       <a href="#the-challenge">The Challenge</a>
@@ -45,33 +45,33 @@ This is my solution for the [Testimonial Grid Section on Frontend Mentor](https:
 
 ## Desktop
 
-![Desktop Solution](./screenshots/Desktop_V.jpg)
+![Desktop Solution](https://user-images.githubusercontent.com/65924727/145695846-f11fc778-f66c-459e-864b-e8d8ce7cc023.png)
 
 <br>
 
 
 ## Tablet
 
-![Tablet Solution](./screenshots/tablet_v.jpg)
+![Tablet Solution](https://user-images.githubusercontent.com/65924727/145695850-cc8c8da9-bc3c-4ae6-b112-f68a721f2dc7.png)
 
 <br>
 
 
 ## Mobile
+![Mobile Solution 1](https://user-images.githubusercontent.com/65924727/145695855-e27ed3c8-4948-4b6e-bfa0-192043294c4e.png)
 
-![Mobile Solution](./screenshots/mobile_v1.jpg) 
-![Mobile Solution](./screenshots/mobile_v2.jpg) 
-![Mobile Solution](./screenshots/mobile_v3.jpg)
+![Mobile Solution 2](https://user-images.githubusercontent.com/65924727/145695860-3c84e244-6531-448b-8be4-1f2a4797ee33.png)
+
+
+![Mobile Solution 3](https://user-images.githubusercontent.com/65924727/145695828-caf6688b-92df-408b-b21b-fae815565923.png)
 
 <br>
-<br>
-
 
 # Demo Link
 Demo - [Lindsey Gunderson ](https://lindseygunderson.github.io/Frontend-Mentor-complete/testimonials-grid-section/) 
 
 <br>
-<br>
+
 
 
 # My Process
