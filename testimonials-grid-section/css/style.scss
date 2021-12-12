@@ -64,7 +64,7 @@ desktop : 900px
 body {
 
     font-family: $ff-barlow;
-    background-color: $neutral-grey;
+    background-color: $netural-blue;
     font-size: 13px;
 
 }
@@ -85,7 +85,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    max-width: 1440px;
+    max-width: 1300px;
 
     .testimonial {
 
@@ -101,10 +101,21 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center;
-            
+            align-items: flex-start;
+            position: relative;
+            z-index: 0;
+
+            svg {
+
+                position: absolute;
+                right: 10px;
+                z-index: -1;
+            }
 
             div {
+
+                z-index: 5;
+                position: relative;
 
                 h1 {
 
@@ -130,6 +141,9 @@ body {
         }
 
         .testimonial__context {
+            
+            text-align: left;
+            position: relative;
 
             &>* {
 
