@@ -1,0 +1,396 @@
+:root {
+    
+    /* import font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    /* primary colors */
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook-blue: hsl(208, 92%, 53%);
+    --twitter-blue: hsl(203, 89%, 53%);
+    --instagram-gradient: linear-gradient( to right, hsl(37, 97%, 70%) 20%, hsl(329, 70%, 58%) 100%);
+    --youtube-red: hsl(348, 97%, 39%);
+
+
+        /* dark mode colour palette */
+        --dark-bg: hsl(230, 17%, 14%);
+        --dark-topbg: hsl(232, 19%, 15%);
+        --dark-cardbg: hsl(228, 28%, 20%);
+        --dark-accent-text: hsl(228, 34%, 66%);
+        --dark-primary-text: hsl(0, 0%, 100%);
+
+    /* toggle buttons */
+    --toggle-hover: linear-gradient( to right, hsl(210, 78%, 56%) 20%, hsl(146, 68%, 55%)100%);
+    --toggle: linear-gradient( to right, hsl(210, 78%, 56%) 20%, hsl(146, 68%, 55%)100%);
+    --toggle: hsl(230, 22%, 74%);
+
+    /* font family */
+    --ff-inter: 'Inter', sans-serif;
+}
+
+
+[color-scheme="dark"]{
+        
+    /* dark mode colour palette */
+    --bg: hsl(230, 17%, 14%);
+    --topbg: hsl(232, 19%, 15%);
+    --cardbg: hsl(228, 28%, 20%);
+    --accent-text: hsl(228, 34%, 66%);
+    --primary-text: hsl(0, 0%, 100%);
+
+    --toggle: linear-gradient( to right, hsl(210, 78%, 56%) 20%, hsl(146, 68%, 55%)100%);
+
+}
+
+[color-scheme="light"]{
+
+    --bg: hsl(0, 0%, 100%);
+    --topbg: hsl(225, 100%, 98%);
+    --cardbg: hsl(226, 52%, 94%);
+    --accent-text: hsl(228, 12%, 44%);
+    --primary-text: hsl(230, 17%, 14%);
+
+    --toggle: hsl(230, 22%, 74%);
+
+}
+
+*, *::before, *::after {
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+
+    font-family: var(--ff-inter);
+    font-size: 14px;
+    background-color: var(--bg);
+
+}
+
+.primary-text {
+
+    color: var(--primary-text);
+}
+
+h1,h2,h3,h4,h5 {
+
+    color: var(--primary-text);
+
+}
+
+h1 {
+
+    font-size: 40px;
+}
+
+h2 {
+
+    font-size: 50px;
+}
+
+h3 {
+
+    font-size: 30px;
+    margin-bottom: 2rem;
+}
+
+h4 {
+
+    font-size: 28px;
+}
+
+
+p {
+
+    color: var(--accent-text);
+}
+
+
+.dashboard-container {
+
+    margin: 5% auto;
+    min-height: 100vh;
+    max-width: 1100px;
+
+}
+
+.dashboard-container > *:not(:last-child) {
+
+    margin-bottom: 3rem;
+}
+
+.dashboard-header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header p {
+
+    font-weight: 700;
+}
+
+.header-toggle {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* toggle button styling */
+
+#toggle-btn {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    width: 50px;
+    height: 23px;
+    border-radius: 100px;
+    background: var(--toggle);
+    position: relative;
+    -webkit-transition: all .3s ease-in-out;
+	transition: all .2s ease-in-out;
+
+}
+
+#toggle-btn:hover {
+    
+    background: var(--toggle-hover);
+    
+}
+
+#toggle-btn:after {
+
+    position: absolute;
+    content: '';
+    left: 3px;
+    top: 2px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--bg);
+    border-radius: 100px;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+#toggle-btn:checked:after {
+
+    left: calc(100% - 1.4rem);
+
+}
+
+
+
+.dashboard-stats, .overview-dashboard {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+}
+
+/* card styling */
+.card, .overview-card {
+
+    background-color: var(--cardbg);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-content > *:not(:last-child), .overview-content > *:not(:last-child) {
+
+    margin-bottom: 1rem;
+
+}
+
+/* border colours for our cards */
+.facebook {
+
+    border-top: 4px solid var(--facebook-blue);
+}
+
+.twitter {
+
+    border-top: 4px solid var(--twitter-blue);
+}
+
+
+.instagram::before {
+
+    content: '';
+    position: absolute;
+    display: block;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--instagram-gradient);
+}
+
+.youtube {
+
+    border-top: 4px solid var(--youtube-red);
+}
+
+
+.row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row img {
+
+    padding-right: 0.5rem;
+}
+
+.followers {
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+.increase p {
+
+    color: var(--lime-green);
+    
+}
+
+.decrease p {
+    color: var(--bright-red);
+    
+}
+
+.increase p , .decrease p {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+
+}
+.increase p img, .decrease p img {
+
+    padding-right: 0.3rem;
+    margin: auto auto;
+
+}
+
+.header-title p , .header-toggle p, .increase p , .decrease p, .overview-content div p {
+
+    font-weight: 700;
+}
+
+
+/* overview dashboard styling */
+
+.overview-content {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.overview-content div {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
+
+@media screen and (max-width: 1100px) {
+
+    .dashboard-container {
+
+        margin: 3%;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .dashboard-container {
+
+        margin: 5%;
+    }
+
+
+    .dashboard-header h1 {
+
+        font-size: 30px;
+    }
+
+    .dashboard-stats, .overview-dashboard {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+  }
+
+  
+@media screen and (max-width: 480px) {
+
+    .dashboard-container {
+
+        margin: 5%;
+    }
+    
+    .dashboard-header {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+    }
+
+    .dashboard-header h1 {
+
+        font-size: 26px;
+    }
+    
+    .dashboard-header > *:not(:last-child){
+
+        margin-bottom: 2rem;
+
+    }
+
+    .header-toggle {
+    
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+
+
+
+    .dashboard-stats, .overview-dashboard {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+  }
