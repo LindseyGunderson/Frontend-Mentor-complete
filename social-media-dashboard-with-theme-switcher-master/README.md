@@ -46,8 +46,10 @@ This is my solution for the [Social Media Dashboard With Toggle](https://www.fro
 
 ## Desktop
 
-![Desktop Solution]()
+![Dark Mode Desktop Solution](https://user-images.githubusercontent.com/65924727/146656747-0b73ddea-adf5-4246-b958-a1be31b6cdbf.png)
 
+
+![Light Mode Desktop Solution](https://user-images.githubusercontent.com/65924727/146656735-5402f546-8c34-4d75-8e47-d1d38da4b3d1.png)
 
 
 <br>
@@ -55,20 +57,18 @@ This is my solution for the [Social Media Dashboard With Toggle](https://www.fro
 
 ## Tablet
 
-![Tablet Solution]()
+![Dark Mode Tablet Solution](https://user-images.githubusercontent.com/65924727/146656629-d446dc58-5caf-46ec-8fb6-d251be46f9a4.png) ![Light Mode Tablet Solution](https://user-images.githubusercontent.com/65924727/146656709-0e87d986-41cc-4037-a334-60537b24ffa2.png)
+
 
 <br>
 
 
 ## Mobile
-![Mobile Solution 1]()
-
-![Mobile Solution 2]()
 
 
-![Mobile Solution 3]()
+![Dark Mode Mobile Solution](https://user-images.githubusercontent.com/65924727/146656650-f3581d14-d73c-4f90-92db-9780b2ddd70f.png) ![Light Mode Mobile Solution](https://user-images.githubusercontent.com/65924727/146656671-269d1f02-cea2-43ee-a941-feeea68682f3.png)
 
-<br>
+
 
 # Demo Link
 Demo - [Social Media Dashboard Live Demo](https://lindseygunderson.github.io/Frontend-Mentor-complete/social-media-dashboard-with-theme-switcher-master/) 
