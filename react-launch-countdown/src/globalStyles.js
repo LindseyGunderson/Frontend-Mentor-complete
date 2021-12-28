@@ -28,8 +28,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     
 }
+h1 {
 
-h1, h2, p, a {
+    color: hsl(0, 0%, 100%);
+}
+ 
+h2, p, a {
 
     color: hsl(237, 18%, 59%);
     text-transform: uppercase;
