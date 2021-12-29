@@ -44,34 +44,60 @@ const Card = styled.div`
     margin: 1rem 0;
     background: hsl(236, 21%, 26%);
     border-radius: 8px;
-    border-bottom: 8px solid hsl(235, 16%, 14%);
+    border-bottom: 5px solid hsl(235, 16%, 14%);
     width: 120px;
     height: 120px;
+    position: relative;
     overflow: hidden;
+    filter: drop-shadow(0.2rem 0.2rem 0.5rem hsl(235, 16%, 14%));
 
 `;
 
 const CardOverlay = styled.div`
     
-    background: linear-gradient(180deg, rgba(0, 0, 0 , 0.2) 50%, transparent 50%);
+    background: linear-gradient(180deg, rgba(0, 0, 0 , 0.25) 50%, transparent 50%);
     background-repeat:no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 120px;
+    width: inherit;
+    height: inherit;
 `;
 
 const Count = styled.h2`
 
     background: transparent;
     color: hsl(345, 95%, 68%);
-    font-size: 80px;
-    width: 120px;
-    height: 120px;
+    font-size: 70px;
+    width: inherit;
+    height: inherit;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`;
+
+const CircleLeft = styled.div`
+
+    position: absolute;
+    top: 54px;
+    left: -5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background: hsl(234, 17%, 12%);
+
+`;
+
+const CircleRight = styled.div`
+
+    position: absolute;
+    top: 54px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background: hsl(234, 17%, 12%);
+
 `;
 
 const Subtitles = styled.p`
@@ -100,7 +126,9 @@ const Countdown = () => {
                    
                         <Card>
                              <CardOverlay>
+                                <CircleLeft />
                                 <Count> 08 </Count>
+                                <CircleRight />
                              </CardOverlay>
                         </Card>
                    
@@ -110,7 +138,11 @@ const Countdown = () => {
                 {/* hours */}
                 <Container>
                     <Card>
+                        <CardOverlay>
+                        <CircleLeft />
                         <Count> 23 </Count>
+                        <CircleRight />
+                        </CardOverlay>
                     </Card>
                     <Subtitles>Hours</Subtitles>
                 </Container>
@@ -118,7 +150,11 @@ const Countdown = () => {
                 {/* minutes */}
                 <Container>
                     <Card>
+                        <CardOverlay>
+                        <CircleLeft />
                         <Count> 55 </Count>
+                        <CircleRight />
+                        </CardOverlay>
                     </Card>
                     <Subtitles>Minutes</Subtitles>
                 </Container>
@@ -126,7 +162,11 @@ const Countdown = () => {
                 {/* seconds */}
                 <Container>
                     <Card>
+                        <CardOverlay>
+                        <CircleLeft />
                         <Count> 41 </Count>
+                        <CircleRight />
+                        </CardOverlay>
                     </Card>
                     <Subtitles>seconds</Subtitles>
                 </Container>

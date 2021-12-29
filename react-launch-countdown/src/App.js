@@ -9,7 +9,7 @@ const Container = styled.div`
 
   min-height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, hsl(234, 17%, 12%), hsl(236, 21%, 26%)) contain;
+  background-image: linear-gradient(0deg, hsl(234, 17%, 12%), hsl(235, 16%, 14%));
 
 `;
 
