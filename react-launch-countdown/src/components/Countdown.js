@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import GlobalStyle from '../globalStyles';
 
@@ -108,7 +108,60 @@ const Subtitles = styled.p`
 
 
 
+    
 const Countdown = () => {
+
+    // update the time remaining
+    const [countdown, setCountdown] = useState({});
+
+    useEffect( () => {
+
+        // calculating the time for days, hours, minutes, seconds.
+        const seconds = 1000;
+        const minutes = seconds * 60;
+        const hours = minutes * 60;
+        const days = hours * 24;
+
+        const startCountdown = () => {
+
+        // Date for when the event will be live
+        const endDate = new Date('April 25, 2022 00:00:00');
+
+        // get the current date
+        const currentDate = new Date().getTime();
+
+        // determine the date gap in between the two dates.
+        const timeRemaining = endDate - currentDate;
+
+        if(timeRemaining < 0){
+            
+            const remainingDays = "0";
+            const remainingHours = "0";
+            const remainingMinutes = "0";
+            const remainingSeconds = "0";
+            
+            setCountdown({remainingDays, remainingHours, remainingMinutes, remainingSeconds});
+
+            clearInterval(startCountdown);
+
+        }else {
+
+             // variables for converting the date
+                const remainingDays = Math.floor(timeRemaining / days);
+                const remainingHours = Math.floor((timeRemaining % days) / hours);
+                const remainingMinutes = Math.floor((timeRemaining % hours) / minutes);
+                const remainingSeconds = Math.floor((timeRemaining % minutes) / seconds);
+
+                setCountdown({remainingDays, remainingHours, remainingMinutes, remainingSeconds});
+
+            }
+        }
+        
+        setInterval(startCountdown, 1000);
+
+    }, [])
+
+
     return (
         <CountdownContainer>
 
@@ -127,7 +180,7 @@ const Countdown = () => {
                         <Card>
                              <CardOverlay>
                                 <CircleLeft />
-                                <Count> 08 </Count>
+                                <Count> {countdown.remainingDays} </Count>
                                 <CircleRight />
                              </CardOverlay>
                         </Card>
@@ -140,7 +193,7 @@ const Countdown = () => {
                     <Card>
                         <CardOverlay>
                         <CircleLeft />
-                        <Count> 23 </Count>
+                        <Count> {countdown.remainingHours} </Count>
                         <CircleRight />
                         </CardOverlay>
                     </Card>
@@ -152,7 +205,7 @@ const Countdown = () => {
                     <Card>
                         <CardOverlay>
                         <CircleLeft />
-                        <Count> 55 </Count>
+                        <Count>{countdown.remainingMinutes} </Count>
                         <CircleRight />
                         </CardOverlay>
                     </Card>
@@ -164,7 +217,7 @@ const Countdown = () => {
                     <Card>
                         <CardOverlay>
                         <CircleLeft />
-                        <Count> 41 </Count>
+                        <Count> {countdown.remainingSeconds} </Count>
                         <CircleRight />
                         </CardOverlay>
                     </Card>
