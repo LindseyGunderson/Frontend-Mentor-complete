@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {mobile} from '../../responsive';
+import {mobile, tablet} from '../../responsive';
 
 
 
@@ -8,11 +8,6 @@ export const CountdownContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    ${mobile({ 
-        
-        
-        })}
 
 `;
 
@@ -33,6 +28,13 @@ export const CountContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 
+    ${tablet({ 
+        
+        gap: "20px"
+        
+        })}
+
+
     ${mobile({ 
         
         gap: "10px"
@@ -44,14 +46,14 @@ export const CountContainer = styled.div`
 export const Title = styled.h1`
 
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 2.2em;
     margin-bottom: 4rem;
+
 
     ${mobile({ 
         
-        textAlign: "center",
-        fontSize: "2.2em"
-        
+        textAlign: "center"
+
         })}
 
 `;
@@ -69,6 +71,16 @@ export const Card = styled.div`
     position: relative;
     overflow: hidden;
     filter: drop-shadow(0.2rem 0.2rem 0.5rem hsl(235, 16%, 14%));
+
+    transition: all 0.4s ease-in-out;
+
+    ${tablet({ 
+        
+        width: "110px",
+        height: "100px"
+        
+        })}
+
 
     ${mobile({ 
         
@@ -92,7 +104,7 @@ export const Count = styled.h2`
 
     background: transparent;
     color: hsl(345, 95%, 68%);
-    font-size: 70px;
+    font-size: 5em;
     width: inherit;
     height: inherit;
 
@@ -100,6 +112,12 @@ export const Count = styled.h2`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    ${tablet({ 
+        
+        fontSize: "4em" 
+        
+        })}
 
     ${mobile({ 
         
@@ -111,24 +129,60 @@ export const Count = styled.h2`
 export const CircleLeft = styled.div`
 
     position: absolute;
-    top: 30px;
+    top: 58px;
     left: -5px;
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border-radius: 100px;
     background: hsl(234, 17%, 12%);
 
+    transition: all 0.4s ease-in-out;
+    
+
+    ${tablet({ 
+        
+        top: "43px",
+        width: "12px",
+        height: "12px" 
+        
+        })}
+
+    ${mobile({ 
+        
+        top: "30px",
+        width: "10px",
+        height: "10px" 
+        
+        })}
 `;
 
 export const CircleRight = styled.div`
 
     position: absolute;
-    top: 30px;
+    top: 58px;
     right: -5px;
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border-radius: 100px;
     background: hsl(234, 17%, 12%);
+
+    transition: all 0.4s ease-in-out;
+
+    ${tablet({ 
+        
+        top: "43px",
+        width: "12px",
+        height: "12px" 
+        
+        })}
+
+    ${mobile({ 
+        
+        top: "30px",
+        width: "10px",
+        height: "10px" 
+        
+        })}
 
 `;
 
