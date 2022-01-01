@@ -98,6 +98,12 @@ export const CardOverlay = styled.div`
     background-size: cover;
     width: inherit;
     height: inherit;
+    transition: 1s;
+
+    &:hover {
+
+        transform: rotateX(-180deg);
+    }
 `;
 
 export const Count = styled.h2`
@@ -112,6 +118,12 @@ export const Count = styled.h2`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+
+    transform: rotateX(180deg);
+
+    }
 
     ${tablet({ 
         

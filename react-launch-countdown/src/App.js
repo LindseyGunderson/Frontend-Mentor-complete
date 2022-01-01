@@ -11,7 +11,7 @@ const Container = styled.div`
   padding-top: 15vh;
   min-height: 100vh;
   overflow: hidden;
-  background: hsl(249, 18%, 14%);
+  background: url(${StarBG}), hsl(249, 18%, 14%);
 
   ${mobile({ 
         
@@ -27,7 +27,7 @@ function App() {
   return (
 
     <>
-      <Container style={{ backgroundImage: `url(${StarBG})`}}>
+      <Container>
         
         <Countdown />
         

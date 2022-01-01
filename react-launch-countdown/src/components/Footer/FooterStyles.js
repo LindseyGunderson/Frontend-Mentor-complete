@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import FooterImage from '../../assets/pattern-hills.svg';
 // import {mobile} from '../../responsive';
 
 export const SocialsContainer = styled.div`
@@ -7,7 +8,8 @@ export const SocialsContainer = styled.div`
     height: 200px;
     width: 100%;
     bottom: 0;
-    background: cover;
+    background: url(${FooterImage});
+    background-size: cover;
 
     display: flex;
     flex-direction: row;
