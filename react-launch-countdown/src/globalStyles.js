@@ -31,12 +31,12 @@ const GlobalStyle = createGlobalStyle`
 }
 h1 {
 
-    color: hsl(0, 0%, 100%);
+    color: var(--neutral-white);
 }
  
 h2, p, a {
 
-    color: hsl(237, 18%, 59%);
+    color: var(--primary-grey-blue);
     text-transform: uppercase;
     font-weight: 700;
 }

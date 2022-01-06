@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import FooterImage from '../../assets/pattern-hills.svg';
-// import {mobile} from '../../responsive';
 
 export const SocialsContainer = styled.div`
 
@@ -39,7 +38,7 @@ export const SocialLink = styled.a`
 
     &:hover {
 
-        color: hsl(345, 95%, 68%);
+        color: var(--primary-soft-red);
 
     }
     

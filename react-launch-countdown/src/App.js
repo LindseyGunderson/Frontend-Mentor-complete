@@ -1,5 +1,4 @@
 
-// import './App.css';
 import styled from "styled-components";
 import Countdown from "./components/Countdown/Countdown";
 import StarBG from './assets/bg-stars.svg';

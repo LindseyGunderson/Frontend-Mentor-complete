@@ -65,7 +65,7 @@ export const Card = styled.div`
     margin: 1rem 0;
     background: hsl(236, 21%, 26%);
     border-radius: 8px;
-    border-bottom: 5px solid hsl(235, 16%, 10%);
+    border-bottom: 5px solid var(--neutral-blue-900);
     width: 130px;
     height: 130px;
     position: relative;
@@ -107,7 +107,7 @@ export const CardOverlay = styled.div`
 export const Count = styled.h2`
 
     background: transparent;
-    color: hsl(345, 95%, 68%);
+    color: var(--primary-soft-red);
     font-size: 5em;
     width: inherit;
     height: inherit;
@@ -139,7 +139,7 @@ export const CircleLeft = styled.div`
     width: 13px;
     height: 13px;
     border-radius: 100px;
-    background: hsl(234, 17%, 12%);
+    background: var(--neutral-blue-900);
 
     transition: all 0.2s ease-in-out;
     
@@ -169,7 +169,7 @@ export const CircleRight = styled.div`
     width: 13px;
     height: 13px;
     border-radius: 100px;
-    background: hsl(234, 17%, 12%);
+    background: var(--neutral-blue-900);
 
     transition: all 0.2s ease-in-out;
 
@@ -194,11 +194,11 @@ export const CircleRight = styled.div`
 export const Subtitles = styled.p`
 
     font-size: 16px;
+    letter-spacing: 3px;
 
     ${mobile({ 
         
-        fontSize: "0.9em",
-        letterSpacing: "3px"
+        fontSize: "0.9em"
         
         })}
    
