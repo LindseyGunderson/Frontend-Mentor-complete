@@ -65,14 +65,15 @@ export const Card = styled.div`
     margin: 1rem 0;
     background: hsl(236, 21%, 26%);
     border-radius: 8px;
-    border-bottom: 5px solid hsl(235, 16%, 14%);
+    border-bottom: 5px solid hsl(235, 16%, 10%);
     width: 130px;
     height: 130px;
     position: relative;
     overflow: hidden;
     filter: drop-shadow(0.2rem 0.2rem 0.5rem hsl(235, 16%, 14%));
 
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
 
     ${tablet({ 
         
@@ -98,13 +99,10 @@ export const CardOverlay = styled.div`
     background-size: cover;
     width: inherit;
     height: inherit;
-    transition: 1s;
-
-    &:hover {
-
-        transform: rotateX(-180deg);
-    }
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
 `;
+
 
 export const Count = styled.h2`
 
@@ -118,12 +116,7 @@ export const Count = styled.h2`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    &:hover {
-
-    transform: rotateX(180deg);
-
-    }
+    transform: rotateX(0deg);
 
     ${tablet({ 
         
@@ -148,7 +141,7 @@ export const CircleLeft = styled.div`
     border-radius: 100px;
     background: hsl(234, 17%, 12%);
 
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
     
 
     ${tablet({ 
@@ -178,7 +171,7 @@ export const CircleRight = styled.div`
     border-radius: 100px;
     background: hsl(234, 17%, 12%);
 
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     ${tablet({ 
         

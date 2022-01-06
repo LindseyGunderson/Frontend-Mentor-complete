@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GlobalStyle from '../../globalStyles';
-import { CountdownContainer, Container, CountContainer, Title, Card, CardOverlay, Count, CircleLeft, CircleRight, Subtitles } from './CountdownStyles';
+import { CountdownContainer, Container, CountContainer, Title, Card, CardOverlay, CardBack, CardOverlayBack, Count, CircleLeft, CircleRight, Subtitles } from './CountdownStyles';
 
 const Countdown = () => {
 
