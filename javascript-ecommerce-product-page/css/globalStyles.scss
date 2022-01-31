@@ -1,0 +1,83 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+// --- base font size --- //
+$base: 16;
+
+// --- convert px to rem --- //
+@function rem($value) {
+
+    $remValue: ($value / $base) + rem;	
+    @return $remValue;
+}
+
+    // --- spacing --- //
+    $spacing-1: clamp(rem(20), 30vw + 1rem, 400px);
+    $spacing-2: clamp(rem(30), 30vw, 400px);
+    $spacing-3: clamp(rem(36), 30vw, 400px);
+    $spacing-4: clamp(rem(40), 30vw, 400px);
+    $spacing-5: clamp(rem(45), 30vw, 400px);
+
+
+    // --- font sizes --- //
+    $fs-1: clamp(rem(14), 30vw + 1rem, 400px);
+    $fs-2: clamp(rem(16), 30vw + 1rem, 400px);
+    $fs-3: clamp(rem(28), 30vw + 1rem, 400px);
+    $fs-4: clamp(rem(36), 30vw + 1rem, 400px);
+
+    // colors
+    $bg-white: hsl(0, 0%, 99%);
+    $accent-orange: hsl(26, 100%, 55%);
+    $accent-pale: hsl(25, 100%, 94%);
+
+    $primary-text: hsl(0, 0%, 0%); // 75% opacity for lightbox
+    $secondary-text: hsl(219, 9%, 45%);
+    $dark-blue-900:hsl(220, 13%, 13%);
+    $dark-blue-700:  hsl(219, 9%, 45%);
+    $dark-blue-500: hsl(220, 14%, 75%);
+    $light-blue-100: hsl(223, 64%, 98%);
+
+    // font weights
+    $fw-400: 400;
+    $fw-700: 700;
+
+    * {
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    h1 {
+
+        line-height: 1.1;
+    }
+
+    h2 {
+
+        line-height: 1.1;
+    }
+
+
+    // utility classes
+    .grid {
+
+        display: grid;
+
+    }
+
+    .flex {
+
+        display: flex;
+    }
+
+    // font
+    .uppercase {
+
+        text-transform: uppercase;
+    }
