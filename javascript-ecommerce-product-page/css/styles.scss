@@ -23,6 +23,74 @@
 
 }
 
+// slider section
+
+// slider buttons for mobile
+.btn {
+
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: $bg-white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+
+}
+
+.btn--left {
+
+    left: 15px;
+    
+    svg{
+        margin-right: 4px;
+    }
+    
+
+}
+
+.btn--right {
+
+    right: 15px;
+
+    svg {
+
+        margin-left: 4px;
+    }
+    
+}
+
+
+// slider images
+.slider__container {
+
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .slider {
+
+        width: 100%;
+        height: 100%;
+
+        .slide {
+
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+
+        }
+    }
+
+}
+
+
 // Product Section
 
 .product {
