@@ -1,5 +1,97 @@
 @use 'globalStyles' as *;
 
+// navbar section styling
+
+nav {
+
+    padding: 20px;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+
+    .mobileMenu {
+
+        cursor: pointer;
+    }
+
+    .nav--section {
+
+        gap: 20px;
+
+    }
+
+    .account {
+
+        img {
+
+            width: 30px;
+            height: 30px;
+
+        }
+
+    }
+
+}
+
+.mobile__sidebar-container {
+
+    background-color: rgba($primary-text, 0.4);
+    position: fixed;
+    transform: translateX(-100%);
+    inset: 0;
+    z-index: 10;
+    transition: transform 0.4s ease-in-out;
+
+    .mobile__sidebar {
+
+        width: 60%;
+        background-color: $bg-white;
+        height: 100%;
+        padding: 1rem;
+        transform: translateX(-100%);
+        transition: transform 0.6s ease-in-out;
+
+        .close {
+
+            margin-bottom: 30px;
+
+        }
+
+        .mobile__link-container {
+
+            list-style: none;
+            display: grid;
+            gap: 25px;
+
+            .mobile__link {
+
+                a {
+
+                    color: $primary-text;
+                    text-decoration: none;
+                    font-weight: $fw-700;
+                }
+
+
+            }
+        }
+    }
+
+}
+
+.active {
+
+    transform: translateX(0%);
+
+    .mobile__sidebar {
+
+        transform: translateX(0%);
+
+        }
+
+}
+
+
 .actual-price {
 
     color: $primary-text;
@@ -28,7 +120,7 @@
 // slider buttons for mobile
 .btn {
 
-    z-index: 99;
+    z-index: 5;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

@@ -18,6 +18,10 @@ h2 {
   line-height: 1.1;
 }
 
+button {
+  border: none;
+}
+
 .grid {
   display: grid;
 }
