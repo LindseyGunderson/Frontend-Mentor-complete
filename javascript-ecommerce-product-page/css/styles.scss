@@ -229,18 +229,19 @@ nav {
 
     .product__checkout {
 
+        width: 100%;
         padding: 0.8rem 1.3rem;
         border-radius: 1rem;
         justify-content: space-between;
         align-items: center;
         
-        button {
+       #increase-qty, #decrease-qty {
 
             display: grid;
-            height: 30px;
-            width: 30px;
-            place-items: center;
-            border: none;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
 
             &:hover {
                  
@@ -276,4 +277,39 @@ nav {
 
     }
 
+}
+
+// shopping cart styling
+
+.cart-container {
+
+    position: fixed;
+    inset: 0;
+    background-color: hsl(0,0,0,0.2);
+    z-index: 10;
+    padding: 1rem 0.5rem;
+}
+
+.cart {
+
+    position: relative;
+    top: 14%;
+    padding: 1rem 0.5rem;
+    background-color: $bg-white;
+    border-radius: 5px;
+
+    .cart__header {
+
+        padding: 0.8rem;
+        border-bottom: 2px solid #ccc;
+        font-weight: bolder;
+        font-size: 1.3rem;
+    }
+
+    .cart__content {
+
+        padding: 1rem;
+        place-items: center;
+    }
+    
 }

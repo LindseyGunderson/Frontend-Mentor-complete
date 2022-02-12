@@ -11,3 +11,9 @@ const   openMenu = document.querySelector('#openMenu'),
     openMenu.addEventListener('click', toggleMenu);
 
     closeMenu.addEventListener('click', toggleMenu);
+
+mobileNavContainer.addEventListener('click', (e) => {
+
+    e.currentTarget === e.target && toggleMenu();
+
+})
