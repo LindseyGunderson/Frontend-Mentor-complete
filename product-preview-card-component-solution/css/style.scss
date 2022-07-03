@@ -223,7 +223,8 @@ select {
 .product-img {
     background: url('../images/image-product-desktop.jpg');
     width: auto;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
