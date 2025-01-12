@@ -30,6 +30,12 @@ p {
   padding: 0;
 }
 
+h2 {
+  text-wrap: balance;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 a {
   text-decoration: none;
 }
@@ -48,6 +54,12 @@ select {
   font: inherit;
 }
 
+body {
+  font-family: "DM Sans", serif;
+  font-size: 18px;
+  background-color: hsl(0deg, 0%, 96.1%);
+}
+
 /* remove animations for people who have turned them off */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -64,6 +76,26 @@ select {
 /*  ------------------------ */
 /*  Components               */
 /*  ------------------------ */
+.bento {
+  grid-template-columns: 1fr;
+  gap: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  place-items: center;
+  grid-template-areas: "social" "multiple" "consistency" "timing" "followers" "growth" "schedule" "content";
+  padding: 20px;
+}
+.bento .bento-item {
+  padding: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  border-radius: 8px;
+  display: grid;
+  gap: 20px;
+  border: 2px solid teal;
+  text-wrap: pretty;
+  width: 100%;
+}
+.bento .bento-item h2 {
+  font-size: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+}
+
 /*  ------------------------ */
 /*  Utilities                */
 /*  ------------------------ */
@@ -79,9 +111,123 @@ select {
   text-transform: uppercase;
 }
 
+.bg-light-purple {
+  background-color: hsl(254deg, 88%, 90%);
+}
+
+.bg-purple {
+  background-color: hsl(256deg, 67%, 59%);
+}
+
+.bg-light-yellow {
+  background-color: hsl(31deg, 66%, 93%);
+}
+
+.bg-yellow {
+  background-color: hsl(39deg, 100%, 71%);
+}
+
+.text-yellow {
+  color: hsl(39deg, 100%, 71%);
+}
+
 /*  ------------------------ */
 /*  Misc                     */
 /*  ------------------------ */
+.social {
+  grid-area: social;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+}
+.social h2 {
+  font-size: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+}
+.social img {
+  margin-inline: auto;
+}
+
+.timing {
+  grid-area: timing;
+  text-align: center;
+}
+
+.content {
+  grid-area: content;
+}
+.content img {
+  width: 250px;
+}
+@media screen and (min-width: 768px) {
+  .content img {
+    width: 100%;
+  }
+}
+
+.multiple {
+  grid-area: multiple;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.growth {
+  grid-area: growth;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.growth h2 {
+  font-size: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+}
+.growth img {
+  width: 200px;
+}
+@media screen and (min-width: 768px) {
+  .growth img {
+    width: 100%;
+  }
+}
+
+.consistency {
+  grid-area: consistency;
+  -webkit-padding-after: 0 !important;
+          padding-block-end: 0 !important;
+}
+.consistency img {
+  width: 250px;
+}
+@media screen and (min-width: 768px) {
+  .consistency img {
+    width: 100%;
+  }
+}
+
+.followers {
+  grid-area: followers;
+  place-items: center;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+}
+.followers img {
+  width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .followers img {
+    width: 100%;
+  }
+}
+
+.schedule {
+  grid-area: schedule;
+}
+.schedule h2 span {
+  color: hsl(256deg, 67%, 59%);
+}
+.schedule img {
+  width: 250px;
+}
+@media screen and (min-width: 768px) {
+  .schedule img {
+    width: 100%;
+  }
+}
+
 .attribution {
   margin: 1rem;
   text-align: center;
