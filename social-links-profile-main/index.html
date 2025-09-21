@@ -12,29 +12,29 @@
 </head>
 <body>
 
-  <main>
+  <main role="main">
 
     <section class="profile-card bg-dark p-30 text-center">
       
           <!-- Profile image and name -->
           <div class="profile">
-            <img src="./assets/images/avatar-jessica.jpeg" alt="" srcset="">
-            <h1 class="profile-name">Jessica Randall</h1>
+            <img src="./assets/images/avatar-jessica.jpeg" alt="">
+            <h1 id="profile-name">Jessica Randall</h1>
             <p class="text-green">London, United Kingdom</p>
           </div>
 
           <!-- Profile description -->
-          <div class="description">
+          <div class="description" aria-labelledby="profile-name">
             <p>"Front-end developer and avid reader."</p>
           </div>
 
           <!-- Social links -->
-          <div class="social-links flex">
-            <a href="#" class="social-link">GitHub</a>
-            <a href="#" class="social-link">Frontend Mentor</a>
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">Instagram</a>
+          <div class="social-links flex" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="GitHub profile">GitHub</a>
+            <a href="#" class="social-link" aria-label="Frontend Mentor profile">Frontend Mentor</a>
+            <a href="#" class="social-link" aria-label="Linkedin profile">LinkedIn</a>
+            <a href="#" class="social-link" aria-label="Twitter profile">Twitter</a>
+            <a href="#" class="social-link" aria-label="Instagram profile">Instagram</a>
           </div>
     </section>
 
