@@ -2,12 +2,23 @@ import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
 function ProjectGrid() {
+
   return (
-    <section className="grid grid-cols-1 items-center sm:grid-cols-2 border">
+   <div className="grid grid-cols-1 md:grid-cols-2">
       {projects.map((project) => (
-        <ProjectCard key={project.title} project={project} />
+          <div key={project.title}
+          className="
+            border-b
+            last:border-b-0
+            md:border-b
+            md:[&:nth-child(odd)]:border-r
+            md:[&:nth-child(n+3)]:border-b-0
+          "
+        >
+          <ProjectCard key={project.title} project={project} />
+        </div>
       ))}
-    </section>
+    </div>
   );
 }
 
