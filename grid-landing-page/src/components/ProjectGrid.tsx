@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 function ProjectGrid() {
   return (
-    <section>
+    <section className="grid grid-cols-1 items-center sm:grid-cols-2 border">
       {projects.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}
